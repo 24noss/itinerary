@@ -1,584 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Escape to Phuket</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上高地・飛騨高山 フットゴルフ旅</title>
+<meta name="description" content="2026.10.10 Sat – 10.11 Sun 上高地・飛騨高山 フットゴルフ旅の旅程（6人・車2台）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --forest:#1f3a2e; --forest-d:#142720; --teal:#2f7f7a; --teal-l:#d9ece9;
+  --wood:#a9744a; --wood-l:#f3e7d8; --stone:#6f6a62; --paper:#f7f3ec; --card:#fffdf8;
+  --ink:#24302a; --line:#e2d9c9; --warn:#b4472b;
+  --serif:'Shippori Mincho','Hiragino Mincho ProN',serif;
+  --sans:'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;font-size:16px;overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.4}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+section{padding:56px 0 8px}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;color:var(--wood);font-weight:700;text-transform:uppercase}
+.sec-title{font-size:1.65rem;color:var(--forest);margin:4px 0 20px}
+.small{font-size:.78rem;color:var(--stone)}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;background:#1f3a2e}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,39,32,.25) 0%,rgba(20,39,32,.15) 35%,rgba(20,39,32,.85) 100%)}
+.hero-in{position:relative;z-index:1;padding:0 16px 40px;max-width:860px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(2rem,9vw,3.4rem);font-weight:700;letter-spacing:.04em;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.hero .date{font-family:var(--serif);font-size:1.2rem;margin:14px 0 10px;letter-spacing:.08em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;font-size:.92rem}
+.credit{position:absolute;right:10px;top:10px;z-index:1;font-size:.7rem;color:rgba(255,255,255,.85);text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.hero-credit-bottom{position:absolute;right:10px;bottom:8px;z-index:1;font-size:.68rem;color:rgba(255,255,255,.75)}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+/* figure */
+figure{margin:0}
+figure img{width:100%;border-radius:14px;aspect-ratio:3/2;object-fit:cover;background:var(--teal-l)}
+figcaption{font-size:.72rem;color:var(--stone);margin-top:6px;text-align:right}
 
-    <style>
-        /* === リセット & ベース設定 === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* overview */
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+.ov{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.ov i{font-size:1.4rem;color:var(--teal);width:28px;text-align:center;margin-top:4px}
+.ov b{display:block;font-family:var(--serif);color:var(--forest);font-size:1.05rem}
+.ov span{font-size:.92rem}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #FAF9F6;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+/* timeline */
+.day-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.day-badge{background:var(--forest);color:#fff;font-family:var(--serif);padding:2px 14px;border-radius:999px;font-size:.95rem}
+.timeline{position:relative;margin:0;padding:0 0 0 26px;list-style:none}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--teal),var(--wood))}
+.tl{position:relative;margin-bottom:18px}
+.tl::before{content:"";position:absolute;left:-26px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--teal)}
+.tl.key::before{border-color:var(--warn);background:var(--warn)}
+.tl-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
+.time{font-family:var(--serif);font-weight:700;color:var(--wood);font-size:1.05rem}
+.tl-card h3{font-size:1.12rem;color:var(--forest);margin:2px 0 6px}
+.tl-card p{margin:6px 0;font-size:.95rem}
+.tl-card ul{margin:6px 0;padding-left:1.2em;font-size:.93rem}
+.note{background:var(--wood-l);border-left:4px solid var(--wood);padding:8px 12px;border-radius:6px;font-size:.9rem;margin:8px 0}
+.alert{background:#fbe9e3;border-left:4px solid var(--warn);padding:10px 12px;border-radius:6px;font-size:.93rem;margin:8px 0}
+.tbc{display:inline-block;background:var(--wood-l);color:var(--wood);border-radius:6px;padding:0 8px;font-size:.8rem;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:12px;background:var(--forest);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;margin:6px 8px 2px 0;max-width:100%}
+.btn.alt{background:var(--teal-l);color:var(--forest)}
+.btn:active{transform:scale(.98)}
 
-        /* === タイポグラフィ === */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
+/* photos */
+.photo-row{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0}
+.photo-row.two{grid-template-columns:1fr 1fr;gap:10px}
+.photo-row.two figure img{aspect-ratio:1/1}
 
-        h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-        }
+/* lodging */
+.lodge{background:var(--forest);color:#f3efe6;margin-top:48px;padding:56px 0 48px}
+.lodge .sec-title{color:#fff}
+.lodge .eyebrow{color:#e0b88f}
+.lodge figcaption{color:#c9d3cc}
+.lodge a{color:#9fd8d2}
+.lodge-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:16px 18px;margin:16px 0}
+.lodge-box h3{color:#fff;font-size:1.1rem;margin-bottom:6px}
+.lodge-box p,.lodge-box li{font-size:.94rem}
+.lodge-box ul{padding-left:1.2em;margin:6px 0}
+.lodge .alert{background:#fff3c9;color:#4a2b17;border-left-color:#e0a000}
+.lodge .alert b{color:#8a2c14}
+.lodge .btn{background:#fff;color:var(--forest)}
+.lodge .btn.alt{background:#2f7f7a;color:#fff}
+.dl{display:grid;grid-template-columns:7em 1fr;gap:6px 10px;font-size:.93rem;margin:0}
+.dl dt{color:#e0b88f;font-weight:700}
+.dl dd{margin:0;min-width:0;overflow-wrap:anywhere}
 
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #009B77;
-        }
+/* footgolf */
+.two-col{display:grid;grid-template-columns:1fr;gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.panel h3{font-size:1.1rem;color:var(--forest);margin-bottom:8px}
+.panel ul{margin:6px 0;padding-left:1.2em;font-size:.94rem}
+.panel li{margin-bottom:4px}
+.ng{color:var(--warn);font-weight:700}
+table.price{width:100%;border-collapse:collapse;font-size:.93rem}
+table.price td{padding:6px 4px;border-bottom:1px dashed var(--line)}
+table.price td:last-child{text-align:right;font-weight:700;white-space:nowrap}
 
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
+/* ideas */
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;min-width:0}
+.idea .no{font-family:var(--serif);color:var(--wood);font-size:.85rem;letter-spacing:.1em}
+.idea h3{font-size:1.05rem;color:var(--forest);margin:2px 0 6px}
+.idea p{font-size:.92rem;margin:0 0 10px;flex:1}
+.idea .btn{margin:0;width:100%}
+.idea .small{margin:6px 0 0}
 
-        p {
-            font-size: 0.95rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.check label{display:flex;align-items:center;gap:14px;min-height:56px;padding:10px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;cursor:pointer;font-size:.97rem}
+.check input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid var(--teal);display:grid;place-items:center;color:transparent;font-size:.85rem;transition:.2s}
+.check input:checked + .box{background:var(--teal);color:#fff}
+.check input:checked ~ .txt{text-decoration:line-through;color:var(--stone)}
+.check input:focus-visible + .box{outline:3px solid var(--wood)}
+.progress{font-size:.9rem;color:var(--stone);margin:0 0 10px}
 
-        a {
-            color: #009B77;
-            text-decoration: none;
-        }
+footer{margin-top:64px;background:var(--forest-d);color:#cfd8d2;text-align:center;padding:36px 16px;font-size:.88rem}
+footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6px}
 
-        /* === ヒーローセクション === */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-                        url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&h=1600&q=90&fit=crop') center/cover;
-            z-index: -1;
-        }
-
-        .hero-content {
-            padding: 0 20px;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        .hero h1 {
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero .subtitle {
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero .date {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            letter-spacing: 3px;
-            color: #BFA977;
-        }
-
-        /* === セクション共通スタイル === */
-        section {
-            padding: 60px 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* === イントロダクション === */
-        .intro {
-            background-color: #F5F5DC;
-            text-align: center;
-        }
-
-        .intro p {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: #555;
-        }
-
-        /* === 旅程セクション === */
-        .itinerary {
-            background-color: #FAF9F6;
-        }
-
-        .day-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .day-header {
-            border-bottom: 2px solid #009B77;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-
-        .day-number {
-            font-size: 0.85rem;
-            color: #BFA977;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .day-title {
-            font-size: 1.5rem;
-            color: #333;
-            margin-top: 5px;
-        }
-
-        .activity-block {
-            margin-bottom: 25px;
-        }
-
-        .activity-block:last-child {
-            margin-bottom: 0;
-        }
-
-        .activity-title {
-            font-size: 1.1rem;
-            color: #009B77;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-
-        .info-item i {
-            color: #BFA977;
-            margin-right: 10px;
-            margin-top: 3px;
-            min-width: 20px;
-        }
-
-        .info-item a {
-            word-break: break-word;
-        }
-
-        .highlights {
-            margin-left: 30px;
-            margin-top: 10px;
-        }
-
-        .highlights li {
-            font-size: 0.88rem;
-            color: #666;
-            margin-bottom: 6px;
-            line-height: 1.5;
-        }
-
-        .memo {
-            background-color: #F5F5DC;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-            font-size: 0.88rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        /* === テーブル（ボート時刻表） === */
-        .timetable {
-            width: 100%;
-            margin: 15px 0;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-        }
-
-        .timetable th,
-        .timetable td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        .timetable th {
-            background-color: #009B77;
-            color: white;
-            font-weight: 500;
-        }
-
-        .timetable td {
-            background-color: white;
-        }
-
-        /* === 画像セクション === */
-        .image-section {
-            margin: 20px 0;
-        }
-
-        .image-section img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* === フッター === */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            margin-bottom: 0;
-        }
-
-        /* === アニメーション === */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* === ユーティリティ === */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-2 {
-            margin-top: 20px;
-        }
-
-        .mb-2 {
-            margin-bottom: 20px;
-        }
-    </style>
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn:active{transform:none}
+}
+@media (min-width:640px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr 1fr}
+  .photo-row{grid-template-columns:1fr 1fr}
+  .photo-row.two{grid-template-columns:1fr 1fr 1fr 1fr}
+  .photo-row.two figure img{aspect-ratio:3/2}
+}
+@media (min-width:960px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .wrap{padding:0 24px}
+}
+</style>
 </head>
 <body>
 
-    <!-- ヒーローセクション -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Our Escape to Phuket</h1>
-            <p class="subtitle">A Journey to Relax and Recharge</p>
-            <p class="date">2025.10.04 - 10.07</p>
+<header class="hero">
+  <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/150920_Kappa-bashi_Kamikochi_Japan01n.jpg/1920px-150920_Kappa-bashi_Kamikochi_Japan01n.jpg" alt="上高地 河童橋と穂高連峰">
+  <div class="hero-in">
+    <div class="eyebrow" style="color:#e8c9a6">Kamikochi &amp; Hida-Takayama</div>
+    <h1>上高地・飛騨高山<br>フットゴルフ旅</h1>
+    <div class="date">2026.10.10 Sat – 10.11 Sun</div>
+    <div class="chips">
+      <span class="chip"><i class="fa-solid fa-user-group"></i> 6人</span>
+      <span class="chip"><i class="fa-solid fa-car-side"></i> 車2台</span>
+      <span class="chip"><i class="fa-solid fa-futbol"></i> フットゴルフ</span>
+    </div>
+  </div>
+  <div class="hero-credit-bottom">写真: Wikimedia Commons</div>
+</header>
+
+<main>
+<!-- overview -->
+<section class="reveal">
+  <div class="wrap">
+    <div class="eyebrow">Overview</div>
+    <h2 class="sec-title">旅のあらまし</h2>
+    <div class="cards">
+      <div class="ov"><i class="fa-solid fa-mountain-sun"></i><div><b>Day1　10/10(土)</b><span>名古屋 → 上高地を散策 → 高山の宿で BBQ・焚き火・サウナ</span></div></div>
+      <div class="ov"><i class="fa-solid fa-futbol"></i><div><b>Day2　10/11(日)</b><span>宿 → 恵那のアドニスゴルフクラブでフットゴルフ → 名古屋へ</span></div></div>
+      <div class="ov"><i class="fa-solid fa-clock"></i><div><b>押さえる時刻</b><span>Day1 08:30 名古屋集合／Day2 13:30 までにゴルフ場へ到着</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Day1 -->
+<section>
+  <div class="wrap">
+    <div class="day-head reveal"><span class="day-badge">Day 1</span><h2 class="sec-title" style="margin:0">10/10(土)　上高地と山の宿</h2></div>
+    <ol class="timeline">
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">08:30</div>
+        <h3>名古屋 集合 → 車2台で出発</h3>
+        <p>名古屋から東海北陸道 → 飛騨清見IC → 中部縦貫道 高山IC → 国道158号で平湯の「あかんだな駐車場」へ（約3時間の目安）。</p>
+        <div class="note"><i class="fa-solid fa-lightbulb"></i> 2台が別々になりにくいよう、途中の合流ポイントとして<b>ひるがの高原SA</b>での休憩を提案します。</div>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85&destination=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> 名古屋駅 → あかんだな駐車場</a>
+      </div></li>
+
+      <li class="tl key reveal"><div class="tl-card">
+        <div class="time">〜12:00</div>
+        <h3>あかんだな駐車場に到着 → シャトルバスで上高地へ</h3>
+        <div class="alert"><i class="fa-solid fa-ban"></i> 上高地は<b>マイカー規制</b>があり、車では入れません。駐車場に車を置いて濃飛バスのシャトルで向かいます。</div>
+        <ul>
+          <li>所要 約30分、片道 1,400円/人（2025年9月時点の情報）</li>
+          <li>予約不可。10月は紅葉シーズンで混雑します</li>
+          <li>最終便の時刻：<span class="tbc">当日要確認</span></li>
+        </ul>
+      </div></li>
+
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">12:30〜15:30</div>
+        <h3>上高地を散策</h3>
+        <p>河童橋（穂高連峰の眺め）・昼食・大正池・梓川沿いの散歩。</p>
+        <div class="note"><i class="fa-solid fa-temperature-low"></i> 10月の上高地は朝晩5℃前後まで冷え込みます。防寒を忘れずに。</div>
+        <div class="photo-row two">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg/1920px-View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg" alt="河童橋からの眺め"><figcaption>河童橋 / Wikimedia Commons</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/150920_Taisho-ike_Kamikochi_Japan01n.jpg/1920px-150920_Taisho-ike_Kamikochi_Japan01n.jpg" alt="大正池"><figcaption>大正池 / Wikimedia Commons</figcaption></figure>
         </div>
-    </section>
+      </div></li>
 
-    <!-- イントロダクション -->
-    <section class="intro">
-        <div class="container">
-            <p>日常を忘れ、心と体を解き放つ。<br>私たちのための特別な時間が、ここプーケットで始まります。</p>
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">15:30〜16:00</div>
+        <h3>帰りのバス → あかんだな駐車場</h3>
+        <p>最終便の時刻は<span class="tbc">当日要確認</span>。余裕を持って乗り場へ。</p>
+      </div></li>
+
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">移動の途中</div>
+        <h3>高山市内で BBQ の食材を買い出し</h3>
+        <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%B1%B1%E5%B8%82+%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> 高山市のスーパーを探す</a>
+      </div></li>
+
+      <li class="tl key reveal"><div class="tl-card">
+        <div class="time">夕方</div>
+        <h3>宿にチェックイン → BBQ・焚き火・サウナ</h3>
+        <div class="alert"><i class="fa-solid fa-triangle-exclamation"></i> チェックインの受付は宿ではなく<b>「飛騨高山ゴルフ練習場ワット」</b>です。詳しくは下の宿セクションへ。</div>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&destination=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> あかんだな → 宿</a>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Lodging -->
+<section class="lodge">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Stay</div>
+      <h2 class="sec-title">宿：WAT RESORT<br><span style="font-size:1.05rem;font-weight:500">焚き火とサウナ BBQ&amp;リゾート ヴィラ高山</span></h2>
+      <figure><img src="https://static.wixstatic.com/media/37456b_8e6880177e514f3fb743319ca0f54a24~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="WAT RESORT 外観" loading="lazy"><figcaption>WAT RESORT</figcaption></figure>
+    </div>
+
+    <div class="alert reveal" style="margin-top:20px"><i class="fa-solid fa-triangle-exclamation"></i> <b>チェックインの受付場所は「飛騨高山ゴルフ練習場ワット」</b>です。宿とは別の場所なので注意してください。</div>
+    <a class="btn alt reveal" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E3%82%B4%E3%83%AB%E3%83%95%E7%B7%B4%E7%BF%92%E5%A0%B4%E3%83%AF%E3%83%83%E3%83%88" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> 受付場所（ワット）</a>
+    <a class="btn reveal" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i> 宿の場所</a>
+    <a class="btn reveal" href="https://wr-resort.watgroup.co.jp/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> 公式サイト</a>
+
+    <div class="lodge-box reveal">
+      <h3><i class="fa-solid fa-circle-info"></i> 基本情報</h3>
+      <dl class="dl">
+        <dt>住所</dt><dd>〒506-0817 岐阜県高山市山口町861-6</dd>
+        <dt>チェックイン</dt><dd>15:00（最終 21:00）</dd>
+        <dt>チェックアウト</dt><dd>10:00</dd>
+        <dt>アクセス</dt><dd>JR高山駅から車で約15分</dd>
+        <dt>駐車場</dt><dd>各棟1台無料、2台目も無料スペースあり（今回は2台とも OK）</dd>
+      </dl>
+    </div>
+
+    <div class="photo-row reveal">
+      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_f42764a86c424237be43ff059ab6c0b3~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="ヴィラ"><figcaption>ヴィラ / WAT RESORT</figcaption></figure>
+      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_d2798bdf959e4bf5a15b6713ef586e39~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="プライベートガーデン"><figcaption>ガーデン / WAT RESORT</figcaption></figure>
+      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_faa27199f7c743a382cd499ddf61a082~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="BBQ"><figcaption>BBQ / WAT RESORT</figcaption></figure>
+      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_cf8224538912413c879cb0aa3655bc6b~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="サウナ"><figcaption>サウナ / WAT RESORT</figcaption></figure>
+    </div>
+
+    <div class="lodge-box reveal">
+      <h3><i class="fa-solid fa-fire"></i> 設備</h3>
+      <ul>
+        <li>1棟の定員8名、室内約70㎡</li>
+        <li>プライベートサウナ／プライベートガーデンで焚き火</li>
+        <li>BBQ コンロと焚き火セットは無料貸出</li>
+        <li>浴室・トイレは各棟専用／ダブルベッド3台／ミニキッチン／Wi-Fi／エアコン</li>
+      </ul>
+    </div>
+    <div class="lodge-box reveal">
+      <h3><i class="fa-solid fa-book"></i> ハウスルール</h3>
+      <ul>
+        <li>手持ち花火程度なら OK。大きな音の出る花火は禁止</li>
+        <li>人工芝を焦がさない</li>
+        <li>火事・けがに注意し、使用後の後始末をしっかり行う</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Day2 -->
+<section>
+  <div class="wrap">
+    <div class="day-head reveal"><span class="day-badge">Day 2</span><h2 class="sec-title" style="margin:0">10/11(日)　キックオフ</h2></div>
+    <ol class="timeline">
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">朝 〜 10:00</div>
+        <h3>片付け → チェックアウト・出発</h3>
+        <p>火の始末と後片付けをして、10:00 にチェックアウト。</p>
+      </div></li>
+
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">10:00 出発</div>
+        <h3>宿 → アドニスゴルフクラブ</h3>
+        <p>約2時間半の目安。高山から東海北陸道 → 東海環状道 → 中央道 恵那IC 方面。昼食は途中の SA などで。</p>
+        <div class="alert"><i class="fa-solid fa-stopwatch"></i> <b>13:30 までに到着必須</b></div>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&destination=%E3%82%A2%E3%83%89%E3%83%8B%E3%82%B9%E3%82%B4%E3%83%AB%E3%83%95%E3%82%AF%E3%83%A9%E3%83%96+%E5%B2%90%E9%98%9C%E7%9C%8C%E6%81%B5%E9%82%A3%E5%B8%82%E4%B8%8A%E7%9F%A2%E4%BD%9C%E7%94%BA%E6%BC%86%E5%8E%9F572-210&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> 宿 → アドニスゴルフクラブ</a>
+      </div></li>
+
+      <li class="tl key reveal"><div class="tl-card">
+        <div class="time">13:30</div>
+        <h3>到着・受付</h3>
+      </div></li>
+
+      <li class="tl key reveal"><div class="tl-card">
+        <div class="time">13:50</div>
+        <h3>スタートホールに集合</h3>
+        <div class="alert"><i class="fa-solid fa-stopwatch"></i> スタートの10分前には到着が必須です。</div>
+      </div></li>
+
+      <li class="tl reveal"><div class="tl-card">
+        <div class="time">14:00 〜 16:30ごろ</div>
+        <h3>キックオフ</h3>
+        <p>プレーの目安は2時間30分。終了後は名古屋へ（下の寄り道提案もどうぞ）。</p>
+        <div class="photo-row two">
+          <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/m_photo.jpg" alt="フットゴルフ"><figcaption>アドニスゴルフクラブ</figcaption></figure>
+          <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/photo01.jpg" alt="フットゴルフのプレー"><figcaption>アドニスゴルフクラブ</figcaption></figure>
         </div>
-    </section>
+      </div></li>
+    </ol>
+  </div>
+</section>
 
-    <!-- 旅程 -->
-    <section class="itinerary">
-        <div class="container">
-            <h2 class="text-center">Itinerary</h2>
+<!-- Footgolf -->
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Footgolf</div>
+      <h2 class="sec-title">フットゴルフのルール・服装</h2>
+      <div class="photo-row two">
+        <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro01.jpg" alt="コース"><figcaption>アドニスゴルフクラブ</figcaption></figure>
+        <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro02.jpg" alt="コース"><figcaption>アドニスゴルフクラブ</figcaption></figure>
+      </div>
+    </div>
 
-            <!-- Day 1 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">Day 1</div>
-                    <h3 class="day-title">Arrival in Paradise</h3>
-                    <div class="day-number">10/4 Sat</div>
-                </div>
+    <div class="two-col">
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-flag"></i> 会場・料金</h3>
+        <p style="font-size:.93rem;margin:0 0 8px">アドニスゴルフクラブ<br>〒509-7511 岐阜県恵那市上矢作町漆原572-210<br>TEL <a href="tel:0573483181">0573-48-3181</a>（電話予約のみ）</p>
+        <table class="price">
+          <tr><td>1ラウンド（土日祝・一般）</td><td>6,000円</td></tr>
+          <tr><td>レンタルボール</td><td>500円/球</td></tr>
+          <tr><td>ボール紛失</td><td>1,000円/球</td></tr>
+          <tr><td>レンタルカート</td><td>2,000円/台</td></tr>
+        </table>
+        <p class="small">1組2〜4名。6人なので3人×2組の想定です。</p>
+        <a class="btn alt" href="https://adonis-gc.com/footgolf.html" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> 公式ページ</a>
+      </div>
 
-                <div class="activity-block">
-                    <div class="activity-title">Flight Info</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <span>18:15 Yangon → 20:00 Bangkok (DMK)<br>Thai AirAsia FD254</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <span>21:45 Bangkok (DMK) → 23:10 Phuket City<br>Thai Lion Air SL1768</span>
-                    </div>
-                </div>
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-shirt"></i> 服装・持ち物</h3>
+        <ul>
+          <li>スポーツシューズ（<span class="ng">サッカースパイクは不可</span>）</li>
+          <li>ゴルフに準じた服装、またはサッカー用のウェアで OK</li>
+          <li>ポロシャツ＋スポーツ用インナー、ハーフパンツ＋スポーツタイツの組み合わせも可</li>
+          <li>寒いときは防寒着 OK</li>
+          <li><span class="ng">来場時のジーパン・サンダルは禁止</span></li>
+          <li>サッカーボールはできるだけ持参</li>
+        </ul>
+      </div>
 
-                <div class="activity-block">
-                    <div class="activity-title">Hotel</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-hotel"></i>
-                        <span>The Lantern Resort Patong</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <a href="https://www.google.com/maps/search/?api=1&query=The+Lantern+Resort+Patong" target="_blank">Google Map</a>
-                    </div>
-                </div>
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-handshake"></i> ルール・マナー</h3>
+        <ul>
+          <li>グリーン上でのプレーは原則禁止</li>
+          <li>大声や他のプレーヤーへの迷惑行為は禁止</li>
+          <li>クラブハウス内・スタート室前・駐車場ではボールを使わない</li>
+          <li>喫煙はティーグラウンドのみ</li>
+          <li>スタッフの指示に従う（従わない場合は退場あり）</li>
+          <li>マナーの悪い人は入場を断られます</li>
+        </ul>
+      </div>
 
-                <div class="memo">
-                    パトンビーチの中心に位置するリゾート。長い移動の後は、ゆっくり休みましょう。
-                </div>
-            </div>
+      <div class="panel reveal">
+        <h3><i class="fa-solid fa-cloud-rain"></i> キャンセル・中止</h3>
+        <ul>
+          <li>当日のキャンセルや来場しなかった場合は、プレーフィと同額のキャンセル料</li>
+          <li>悪天候などで予告なく中止になることがあります</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- Day 2 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">Day 2</div>
-                    <h3 class="day-title">Island Hopping Adventure</h3>
-                    <div class="day-number">10/5 Sun</div>
-                </div>
+<!-- Ideas -->
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">On the way home</div>
+      <h2 class="sec-title">帰り道の寄り道提案</h2>
+      <p style="margin:-8px 0 18px;font-size:.95rem">こんなこともできます。気分と時間で選んでください。</p>
+    </div>
+    <div class="grid">
+      <div class="idea reveal"><span class="no">01</span><h3>くしはら温泉 ささゆりの湯</h3><p>恵那市串原。ゴルフ場から近く、汗を流してから帰れます。<br>営業 10:00〜21:00（受付は20:00まで）／水曜定休</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%97%E3%81%AF%E3%82%89%E6%B8%A9%E6%B3%89+%E3%81%95%E3%81%95%E3%82%86%E3%82%8A%E3%81%AE%E6%B9%AF" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">02</span><h3>恵那川上屋 恵那峡店</h3><p>栗きんとん・栗スイーツ。10月は栗の旬です。<br>営業 9:00〜18:30／恵那市大井町2632-105<br>栗きんとんは9月〜翌1月中旬の販売</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E6%81%B5%E9%82%A3%E5%B7%9D%E4%B8%8A%E5%B1%8B+%E6%81%B5%E9%82%A3%E5%B3%A1%E5%BA%97" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">03</span><h3>道の駅 上矢作 ラ・フォーレ福寿の里</h3><p>ゴルフ場のすぐ近くでおみやげ探し。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85+%E4%B8%8A%E7%9F%A2%E4%BD%9C+%E3%83%A9%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC%E7%A6%8F%E5%AF%BF%E3%81%AE%E9%87%8C" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">04</span><h3>足助の町並み・香嵐渓</h3><p>豊田市。国道153号で名古屋へ帰る途中。紅葉の本番は11月です。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E8%B6%B3%E5%8A%A9%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF+%E9%A6%99%E5%B5%90%E6%B8%93" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">05</span><h3>土岐プレミアム・アウトレット</h3><p>中央道を通る帰り道で買い物。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%9F%E5%B2%90%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%BB%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">06</span><h3>名古屋で打ち上げ</h3><p>名古屋に戻ってからごはん。手羽先・味噌煮込み・ひつまぶし。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E5%8F%A4%E5%B1%8B+%E6%89%8B%E7%BE%BD%E5%85%88+%E5%91%B3%E5%99%8C%E7%85%AE%E8%BE%BC%E3%81%BF+%E3%81%B2%E3%81%A4%E3%81%BE%E3%81%B6%E3%81%97" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+    </div>
+  </div>
+</section>
 
-                <div class="image-section">
-                    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Phi Phi Islands">
-                </div>
+<!-- Checklist -->
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Packing</div>
+      <h2 class="sec-title">持ち物チェックリスト</h2>
+      <p class="progress" id="progress" aria-live="polite"></p>
+      <ul class="check" id="check">
+        <li><label><input type="checkbox" data-k="0"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">防寒着（上高地は朝晩5℃前後）</span></label></li>
+        <li><label><input type="checkbox" data-k="1"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">歩きやすい靴</span></label></li>
+        <li><label><input type="checkbox" data-k="2"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">スポーツシューズ（スパイク以外）</span></label></li>
+        <li><label><input type="checkbox" data-k="3"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">フットゴルフ用のウェア</span></label></li>
+        <li><label><input type="checkbox" data-k="4"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">サッカーボール</span></label></li>
+        <li><label><input type="checkbox" data-k="5"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">着替え・タオル</span></label></li>
+        <li><label><input type="checkbox" data-k="6"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">サウナ用の着替え</span></label></li>
+        <li><label><input type="checkbox" data-k="7"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">現金（バス代など）</span></label></li>
+        <li><label><input type="checkbox" data-k="8"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">モバイルバッテリー</span></label></li>
+        <li><label><input type="checkbox" data-k="9"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">BBQ の食材・飲み物（買い出し）</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
 
-                <div class="activity-block">
-                    <div class="activity-title">ピピ島ツアー (Phi Phi Islands Tour)</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <span><strong>Pick-up:</strong> 08:00 at the hotel lobby</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-star"></i>
-                        <span><strong>Highlights:</strong></span>
-                    </div>
-                    <ul class="highlights">
-                        <li>マイトン島でのシュノーケリング (イルカに会えるかも！)</li>
-                        <li>ピレーラグーンでの遊泳</li>
-                        <li>映画『ザ・ビーチ』の舞台、マヤベイを訪問</li>
-                        <li>ピピ・ドーン島でのタイ料理ビュッフェランチ</li>
-                        <li>カイ島でのリラックスタイム</li>
-                    </ul>
-                </div>
+<footer>
+  <div class="ft">上高地・飛騨高山 フットゴルフ旅</div>
+  <div>2026.10.10 Sat – 10.11 Sun ／ 6人・車2台</div>
+  <div class="small" style="color:#9fb0a6;margin-top:10px">写真: Wikimedia Commons / WAT RESORT / アドニスゴルフクラブ</div>
+  <div class="small" style="color:#9fb0a6">料金・時刻は変更の可能性があります。不確かな項目は当日確認してください。</div>
+</footer>
 
-                <div class="activity-block">
-                    <div class="activity-title">サンデーナイトマーケット</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Phuket+Sunday+Night+Market" target="_blank">Google Map</a>
-                    </div>
-                    <div class="memo">
-                        プーケットオールドタウンで毎週日曜に開催されるナイトマーケット。タラート・ラードヤイとも呼ばれ、地元の味が楽しめる屋台料理や、カラフルな雑貨、ハンドメイドアクセサリーが並びます。おすすめは、ココナッツアイスクリーム、ロティ（タイ風クレープ）、マンゴーもち米。お土産には、バティック柄の小物やアロマグッズが人気です。
-                    </div>
-                </div>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}});
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
 
-                <div class="activity-block">
-                    <div class="activity-title">Night</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-martini-glass"></i>
-                        <span>パトンビーチのバングラ通りで乾杯！</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">Day 3</div>
-                    <h3 class="day-title">Ultimate Relaxation</h3>
-                    <div class="day-number">10/6 Mon</div>
-                </div>
-
-                <div class="image-section">
-                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80" alt="Island Resort">
-                </div>
-
-                <div class="activity-block">
-                    <div class="activity-title">Check-out & Move to a Private Island</div>
-                </div>
-
-                <div class="activity-block">
-                    <div class="activity-title">Hotel</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-hotel"></i>
-                        <span>Island Escape by Burasari (ココナッツ島)</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-link"></i>
-                        <a href="https://isescape.com/" target="_blank">Official Website</a>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Island+Escape+by+Burasari" target="_blank">Google Map</a>
-                    </div>
-                </div>
-
-                <div class="activity-block">
-                    <div class="activity-title">Speedboat Transfer</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-ship"></i>
-                        <span><strong>Departure Pier:</strong> Phuket Boat Lagoon</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <a href="https://goo.gl/maps/LX14tWjVJkeDwgng9" target="_blank">Pier Map</a>
-                    </div>
-
-                    <table class="timetable">
-                        <thead>
-                            <tr>
-                                <th>Boat Lagoon → Resort</th>
-                                <th>Resort → Boat Lagoon</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>09:30</td>
-                                <td>10:00</td>
-                            </tr>
-                            <tr>
-                                <td>10:30</td>
-                                <td>11:30</td>
-                            </tr>
-                            <tr>
-                                <td>12:00</td>
-                                <td>12:30</td>
-                            </tr>
-                            <tr>
-                                <td>14:00</td>
-                                <td>15:00</td>
-                            </tr>
-                            <tr>
-                                <td>15:30</td>
-                                <td>16:00</td>
-                            </tr>
-                            <tr>
-                                <td>17:00</td>
-                                <td>17:30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="memo">
-                    この日はプライベート感あふれる離島リゾートで、何もしない贅沢を味わいましょう。
-                </div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">Day 4</div>
-                    <h3 class="day-title">Last Day in Phuket</h3>
-                    <div class="day-number">10/7 Tue</div>
-                </div>
-
-                <div class="image-section">
-                    <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?w=600&q=80" alt="Phuket Town">
-                </div>
-
-                <div class="activity-block">
-                    <div class="activity-title">Morning & Afternoon おすすめプラン</div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-1"></i>
-                        <div>
-                            <strong>プーケットオールドタウン散策</strong><br>
-                            <span style="font-size: 0.88rem; color: #666;">シノ・ポルトガル様式のカラフルな街並みを散策。インスタ映えスポット満載のタラン通り、おしゃれなカフェ「Raya Restaurant」でのランチ、アンティークショップ巡りを楽しめます。</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item mt-2">
-                        <i class="fa-solid fa-2"></i>
-                        <div>
-                            <strong>ビーチカフェでリラックス</strong><br>
-                            <span style="font-size: 0.88rem; color: #666;">ナイハーンビーチの「The Lawn Beach Club」やカタビーチの「Kata Rocks」で、海を眺めながら最後のトロピカルドリンクを。サンセットまでのんびり過ごすのに最適です。</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item mt-2">
-                        <i class="fa-solid fa-3"></i>
-                        <div>
-                            <strong>帰国前のスパ・マッサージ</strong><br>
-                            <span style="font-size: 0.88rem; color: #666;">プーケットタウンの「Oasis Spa」や空港近くの「Baan Thai Spa」で、旅の疲れを癒す極上のタイ古式マッサージやアロマトリートメント。フライト前に心身ともにリフレッシュできます。</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="activity-block mt-2">
-                    <div class="activity-title">Flight Info</div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <span>20:20 Phuket City → 21:45 Bangkok (BKK)<br>Thai AirAsia FD4115</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <span>23:25 Bangkok (BKK) → 00:15 (10/8) Yangon<br>Myanmar Airways 8M373</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- フッター -->
-    <footer>
-        <p>Have an unforgettable trip!</p>
-    </footer>
-
-    <script>
-        // スムーススクロール効果（オプション）
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // ページロード時のフェードインアニメーション
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.5s';
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-    </script>
-
+  var KEY='kamikochi-trip-2026-check';
+  var boxes=document.querySelectorAll('#check input');
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){state={}}
+  function upd(){
+    var n=0;boxes.forEach(function(b){if(b.checked)n++});
+    document.getElementById('progress').textContent=n+' / '+boxes.length+' 準備完了';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.k];
+    b.addEventListener('change',function(){
+      state[b.dataset.k]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+      upd();
+    });
+  });
+  upd();
+})();
+</script>
 </body>
 </html>
