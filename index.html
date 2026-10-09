@@ -3,181 +3,244 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>上高地・飛騨高山 フットゴルフ旅</title>
-<meta name="description" content="2026.10.10 Sat – 10.11 Sun 上高地・飛騨高山 フットゴルフ旅の旅程（6人・車2台）">
+<title>秋の飛騨、佐んぽ</title>
+<meta name="description" content="上高地・飛騨高山 / 2026.10.10 Sat – 10.11 Sun / 6人・車2台の旅程">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --forest:#1f3a2e; --forest-d:#142720; --teal:#2f7f7a; --teal-l:#d9ece9;
-  --wood:#a9744a; --wood-l:#f3e7d8; --stone:#6f6a62; --paper:#f7f3ec; --card:#fffdf8;
-  --ink:#24302a; --line:#e2d9c9; --warn:#b4472b;
+  --oat:#ece5d6; --paper:#f5f1e7; --sage:#8a9b86; --sage-l:#d5dccf; --sage-d:#4d5f4f;
+  --char:#2b2d2a; --char-2:#363a35; --stone:#5c594f; --line:#cfc7b4; --terra:#9c4e36;
   --serif:'Shippori Mincho','Hiragino Mincho ProN',serif;
   --sans:'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',sans-serif;
+  --en:'Cormorant Garamond','Times New Roman',serif;
+  --film:saturate(.8) contrast(.95) sepia(.1) brightness(1.02);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;font-size:16px;overflow-x:hidden;-webkit-text-size-adjust:100%}
-img{max-width:100%;display:block}
-a{color:var(--teal)}
-h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.4}
-.wrap{max-width:860px;margin:0 auto;padding:0 16px}
-section{padding:56px 0 8px}
-.eyebrow{font-size:.78rem;letter-spacing:.2em;color:var(--wood);font-weight:700;text-transform:uppercase}
-.sec-title{font-size:1.65rem;color:var(--forest);margin:4px 0 20px}
-.small{font-size:.78rem;color:var(--stone)}
+body{margin:0;background:var(--oat);color:var(--char);font-family:var(--sans);line-height:1.95;font-size:16px;letter-spacing:.02em;overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%}
+/* film grain */
+body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+img{max-width:100%;display:block;filter:var(--film)}
+a{color:var(--sage-d)}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.5;font-weight:500}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:88px 0 0}
+.en{font-family:var(--en);font-size:.82rem;letter-spacing:.32em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.sec-title{font-size:clamp(1.5rem,6vw,2.1rem);margin:6px 0 28px;letter-spacing:.08em}
+.small{font-size:.8rem;color:var(--stone)}
+figure{margin:0}
+figure img{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sage-l);border-radius:2px}
+figcaption{font-family:var(--en);font-size:.8rem;letter-spacing:.12em;color:var(--stone);margin-top:8px}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:6px 20px;border:1px solid var(--char);border-radius:2px;color:var(--char);text-decoration:none;font-size:.88rem;letter-spacing:.08em;line-height:1.5;max-width:100%;transition:background .6s ease,color .6s ease}
+.btn:hover,.btn:focus-visible{background:var(--char);color:var(--oat)}
+.btn.fill{background:var(--char);color:var(--oat)}
+.btn.fill:hover,.btn.fill:focus-visible{background:var(--sage-d);border-color:var(--sage-d)}
+a:focus-visible,input:focus-visible+.box{outline:3px solid var(--terra);outline-offset:3px}
 
 /* hero */
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;background:#1f3a2e}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,39,32,.25) 0%,rgba(20,39,32,.15) 35%,rgba(20,39,32,.85) 100%)}
-.hero-in{position:relative;z-index:1;padding:0 16px 40px;max-width:860px;margin:0 auto;width:100%}
-.hero h1{font-size:clamp(2rem,9vw,3.4rem);font-weight:700;letter-spacing:.04em;text-shadow:0 2px 16px rgba(0,0,0,.4)}
-.hero .date{font-family:var(--serif);font-size:1.2rem;margin:14px 0 10px;letter-spacing:.08em}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;font-size:.92rem}
-.credit{position:absolute;right:10px;top:10px;z-index:1;font-size:.7rem;color:rgba(255,255,255,.85);text-shadow:0 1px 3px rgba(0,0,0,.6)}
-.hero-credit-bottom{position:absolute;right:10px;bottom:8px;z-index:1;font-size:.68rem;color:rgba(255,255,255,.75)}
+.hero{max-width:1200px;margin:0 auto;padding:0 0 0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end}
+.hero-ph{grid-column:1/-1;grid-row:1;position:relative;margin-left:0}
+.hero-ph img{width:100%;height:68svh;min-height:380px;aspect-ratio:auto;border-radius:0}
+.hero-ph .credit{position:absolute;right:12px;top:12px;font-family:var(--en);font-size:.78rem;letter-spacing:.14em;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+.hero .en{letter-spacing:.2em;font-size:.75rem}
+.hero-card{grid-column:1/-1;grid-row:2;background:var(--paper);margin:-72px 20px 0 20px;padding:32px 24px 30px;position:relative;z-index:2;border:1px solid var(--line)}
+.hero h1{font-size:clamp(1.7rem,8vw,3.6rem);letter-spacing:.08em;white-space:nowrap;font-weight:700;line-height:1.35;margin:10px 0 18px}
+.hero .sub{font-size:.95rem;color:var(--stone);letter-spacing:.1em;line-height:1.9}
+.hero .sub span{display:block}
 
-/* figure */
-figure{margin:0}
-figure img{width:100%;border-radius:14px;aspect-ratio:3/2;object-fit:cover;background:var(--teal-l)}
-figcaption{font-size:.72rem;color:var(--stone);margin-top:6px;text-align:right}
+/* intro */
+.intro{display:grid;gap:28px}
+.intro .lead{font-family:var(--serif);font-size:1.12rem;line-height:2.1;letter-spacing:.06em}
+.glance{border-top:1px solid var(--line)}
+.glance div{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.glance b{font-family:var(--en);font-weight:500;font-size:1.05rem;letter-spacing:.18em;color:var(--terra)}
+.glance span{font-size:.94rem}
 
-/* overview */
-.cards{display:grid;grid-template-columns:1fr;gap:12px}
-.ov{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
-.ov i{font-size:1.4rem;color:var(--teal);width:28px;text-align:center;margin-top:4px}
-.ov b{display:block;font-family:var(--serif);color:var(--forest);font-size:1.05rem}
-.ov span{font-size:.92rem}
+/* day header */
+.day-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.day-h .num{font-family:var(--en);font-style:italic;font-size:4.2rem;line-height:1;color:var(--sage);font-weight:400}
+.day-h h2{font-size:clamp(1.35rem,5.6vw,1.9rem);letter-spacing:.08em}
 
-/* timeline */
-.day-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
-.day-badge{background:var(--forest);color:#fff;font-family:var(--serif);padding:2px 14px;border-radius:999px;font-size:.95rem}
-.timeline{position:relative;margin:0;padding:0 0 0 26px;list-style:none}
-.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--teal),var(--wood))}
-.tl{position:relative;margin-bottom:18px}
-.tl::before{content:"";position:absolute;left:-26px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--teal)}
-.tl.key::before{border-color:var(--warn);background:var(--warn)}
-.tl-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
-.time{font-family:var(--serif);font-weight:700;color:var(--wood);font-size:1.05rem}
-.tl-card h3{font-size:1.12rem;color:var(--forest);margin:2px 0 6px}
-.tl-card p{margin:6px 0;font-size:.95rem}
-.tl-card ul{margin:6px 0;padding-left:1.2em;font-size:.93rem}
-.note{background:var(--wood-l);border-left:4px solid var(--wood);padding:8px 12px;border-radius:6px;font-size:.9rem;margin:8px 0}
-.alert{background:#fbe9e3;border-left:4px solid var(--warn);padding:10px 12px;border-radius:6px;font-size:.93rem;margin:8px 0}
-.tbc{display:inline-block;background:var(--wood-l);color:var(--wood);border-radius:6px;padding:0 8px;font-size:.8rem;font-weight:700}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:12px;background:var(--forest);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;margin:6px 8px 2px 0;max-width:100%}
-.btn.alt{background:var(--teal-l);color:var(--forest)}
-.btn:active{transform:scale(.98)}
+/* meet */
+.meet{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;padding:22px 0;border-top:1px solid var(--char);border-bottom:1px solid var(--line);margin-bottom:56px}
+.time{font-family:var(--en);font-size:2.4rem;line-height:1;color:var(--terra);font-weight:500;letter-spacing:.04em}
+.meet h3{font-size:1.2rem;letter-spacing:.08em}
 
-/* photos */
-.photo-row{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0}
-.photo-row.two{grid-template-columns:1fr 1fr;gap:10px}
-.photo-row.two figure img{aspect-ratio:1/1}
+/* spread */
+.spread{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:12px}
+.spread .a{grid-column:1/11;grid-row:1}
+.spread .b{grid-column:5/13;grid-row:2;margin-top:-16vw;border:6px solid var(--oat);border-radius:2px;position:relative}
+.spread .b img{aspect-ratio:4/3}
+.spread .info{grid-column:1/-1;grid-row:3;margin-top:36px}
+.info h3{font-size:clamp(1.5rem,6vw,2rem);letter-spacing:.1em;margin:4px 0 16px}
+.info p{font-size:.96rem;margin-bottom:12px}
+.info ul{margin:0 0 14px;padding:0;list-style:none}
+.info li{position:relative;padding:8px 0 8px 22px;border-bottom:1px solid var(--line);font-size:.94rem}
+.info li::before{content:"";position:absolute;left:2px;top:1.15em;width:10px;height:1px;background:var(--terra)}
+.note,.alert{padding:14px 16px;font-size:.93rem;margin:14px 0;border-radius:2px}
+.note{background:var(--sage-l);color:#2f3d31}
+.alert{background:#e8d3c6;color:#4d2619}
+.tbc{display:inline-block;border:1px solid var(--terra);color:var(--terra);padding:0 8px;font-size:.78rem;border-radius:2px;margin-left:4px;line-height:1.7}
 
-/* lodging */
-.lodge{background:var(--forest);color:#f3efe6;margin-top:48px;padding:56px 0 48px}
-.lodge .sec-title{color:#fff}
-.lodge .eyebrow{color:#e0b88f}
-.lodge figcaption{color:#c9d3cc}
-.lodge a{color:#9fd8d2}
-.lodge-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:16px 18px;margin:16px 0}
-.lodge-box h3{color:#fff;font-size:1.1rem;margin-bottom:6px}
-.lodge-box p,.lodge-box li{font-size:.94rem}
-.lodge-box ul{padding-left:1.2em;margin:6px 0}
-.lodge .alert{background:#fff3c9;color:#4a2b17;border-left-color:#e0a000}
-.lodge .alert b{color:#8a2c14}
-.lodge .btn{background:#fff;color:var(--forest)}
-.lodge .btn.alt{background:#2f7f7a;color:#fff}
-.dl{display:grid;grid-template-columns:7em 1fr;gap:6px 10px;font-size:.93rem;margin:0}
-.dl dt{color:#e0b88f;font-weight:700}
-.dl dd{margin:0;min-width:0;overflow-wrap:anywhere}
+/* stay */
+.stay{background:var(--char);color:#e9e3d4;margin-top:96px;padding:88px 0 80px}
+.stay .en{color:#d1a388}
+.stay .sec-title{margin-bottom:6px}
+.stay .sec-sub{font-family:var(--serif);font-size:.98rem;letter-spacing:.1em;color:#c7c2b3;margin-bottom:28px}
+.stay a{color:#c9d6c4}
+.stay figcaption{color:#aeab9f}
+.stay .btn{border-color:#e9e3d4;color:#e9e3d4}
+.stay .btn:hover,.stay .btn:focus-visible{background:#e9e3d4;color:var(--char)}
+.stay .btn.fill{background:#e9e3d4;color:var(--char)}
+.stay .btn.fill:hover,.stay .btn.fill:focus-visible{background:var(--sage);border-color:var(--sage);color:var(--char)}
+.stay .alert{background:#4a2f25;color:#f1dccd;margin-top:28px}
+.stay-hero{margin:0 -20px}
+.stay-hero img{aspect-ratio:4/3;border-radius:0}
+.stay-hero figcaption{padding:0 20px}
+.boxes{display:grid;gap:36px;margin-top:48px}
+.box-t{font-family:var(--serif);font-size:1.1rem;letter-spacing:.12em;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #6b6d65}
+.dl{display:grid;grid-template-columns:6.8em minmax(0,1fr);gap:8px 12px;font-size:.93rem;margin:0}
+.dl dt{color:#d1a388}
+.dl dd{margin:0;overflow-wrap:anywhere}
+.stay ul{margin:0;padding:0;list-style:none}
+.stay li{position:relative;padding:6px 0 6px 20px;font-size:.93rem}
+.stay li::before{content:"";position:absolute;left:0;top:1.1em;width:10px;height:1px;background:#d1a388}
+.stag{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:56px}
+.stag figure:nth-child(even){margin-top:36px}
+.stag figure:nth-child(odd){margin-bottom:-0px}
+
+/* day 2 */
+.moments{border-top:1px solid var(--char)}
+.mo{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:8px 18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.mo .time{font-size:2rem}
+.mo .time.sm{font-size:1.15rem;letter-spacing:.14em;line-height:1.6}
+.mo h3{font-size:1.1rem;letter-spacing:.08em}
+.mo p{font-size:.94rem;margin-top:4px}
+.pair{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:12px;margin-top:48px}
+.pair .a{grid-column:1/9;grid-row:1}
+.pair .b{grid-column:6/13;grid-row:2;margin-top:-12vw;border:6px solid var(--oat);position:relative}
 
 /* footgolf */
-.two-col{display:grid;grid-template-columns:1fr;gap:14px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.panel h3{font-size:1.1rem;color:var(--forest);margin-bottom:8px}
-.panel ul{margin:6px 0;padding-left:1.2em;font-size:.94rem}
-.panel li{margin-bottom:4px}
-.ng{color:var(--warn);font-weight:700}
-table.price{width:100%;border-collapse:collapse;font-size:.93rem}
-table.price td{padding:6px 4px;border-bottom:1px dashed var(--line)}
-table.price td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.fg-ph{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:12px;margin-bottom:48px}
+.fg-ph .a{grid-column:1/9}
+.fg-ph .b{grid-column:6/13;grid-row:2;margin-top:-10vw;border:6px solid var(--oat);position:relative}
+.panels{display:grid;gap:20px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px 22px}
+.panel h3{font-size:1.1rem;letter-spacing:.1em;margin-bottom:12px}
+.panel ul{margin:0;padding:0;list-style:none}
+.panel li{position:relative;padding:6px 0 6px 20px;font-size:.93rem}
+.panel li::before{content:"";position:absolute;left:0;top:1.15em;width:10px;height:1px;background:var(--terra)}
+.ng{color:var(--terra);font-weight:700}
+table.price{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:10px}
+table.price td{padding:9px 0;border-bottom:1px solid var(--line)}
+table.price td:last-child{text-align:right;white-space:nowrap;font-family:var(--serif)}
+.panel .addr{font-size:.92rem}
 
 /* ideas */
-.grid{display:grid;grid-template-columns:1fr;gap:12px}
-.idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;min-width:0}
-.idea .no{font-family:var(--serif);color:var(--wood);font-size:.85rem;letter-spacing:.1em}
-.idea h3{font-size:1.05rem;color:var(--forest);margin:2px 0 6px}
-.idea p{font-size:.92rem;margin:0 0 10px;flex:1}
-.idea .btn{margin:0;width:100%}
-.idea .small{margin:6px 0 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--char)}
+.idea{padding:26px 0 24px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.idea .no{font-family:var(--en);font-style:italic;color:var(--sage);font-size:1.8rem;line-height:1}
+.idea h3{font-size:1.08rem;letter-spacing:.06em;margin:6px 0 8px}
+.idea .pun{display:block;font-family:var(--en);font-size:.8rem;letter-spacing:.14em;color:var(--terra);margin-top:0}
+.idea p{font-size:.92rem;flex:1}
+.idea .btn{margin-top:14px;align-self:flex-start}
+.idea .small{margin-top:8px}
 
 /* checklist */
-.check{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.check label{display:flex;align-items:center;gap:14px;min-height:56px;padding:10px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;cursor:pointer;font-size:.97rem}
+.check{list-style:none;margin:0;padding:0;border-top:1px solid var(--char)}
+.check label{display:flex;align-items:center;gap:16px;min-height:56px;padding:10px 2px;border-bottom:1px solid var(--line);cursor:pointer;font-size:.97rem}
 .check input{position:absolute;opacity:0;pointer-events:none}
-.box{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid var(--teal);display:grid;place-items:center;color:transparent;font-size:.85rem;transition:.2s}
-.check input:checked + .box{background:var(--teal);color:#fff}
-.check input:checked ~ .txt{text-decoration:line-through;color:var(--stone)}
-.check input:focus-visible + .box{outline:3px solid var(--wood)}
-.progress{font-size:.9rem;color:var(--stone);margin:0 0 10px}
+.box{position:relative;flex:none;width:24px;height:24px;border:1px solid var(--char);border-radius:2px;transition:background .5s ease}
+.box::after{content:"";position:absolute;left:7px;top:2px;width:7px;height:13px;border:solid var(--oat);border-width:0 1.5px 1.5px 0;transform:rotate(40deg);opacity:0;transition:opacity .5s ease}
+.check input:checked+.box{background:var(--sage-d);border-color:var(--sage-d)}
+.check input:checked+.box::after{opacity:1}
+.check input:checked~.txt{color:var(--stone);text-decoration:line-through;text-decoration-thickness:1px}
+.progress{font-family:var(--en);letter-spacing:.14em;font-size:1rem;color:var(--terra);margin:0 0 12px}
 
-footer{margin-top:64px;background:var(--forest-d);color:#cfd8d2;text-align:center;padding:36px 16px;font-size:.88rem}
-footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6px}
+footer{margin-top:112px;background:var(--char-2);color:#d8d3c4;text-align:center;padding:64px 20px 56px}
+footer .ft{font-family:var(--serif);font-size:1.5rem;letter-spacing:.2em;color:#f3efe3;margin-bottom:10px}
+footer .small{color:#a9a595;margin-top:14px}
 
+@media (max-width:699px){.spread .a figcaption,.pair .a figcaption,.fg-ph .a figcaption{display:none}}
 /* reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1.4s ease,transform 1.4s ease}
+.js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  .btn:active{transform:none}
+  *{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
 }
-@media (min-width:640px){
-  .cards{grid-template-columns:repeat(3,1fr)}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .two-col{grid-template-columns:1fr 1fr}
-  .photo-row{grid-template-columns:1fr 1fr}
-  .photo-row.two{grid-template-columns:1fr 1fr 1fr 1fr}
-  .photo-row.two figure img{aspect-ratio:3/2}
+
+@media (min-width:700px){
+  .wrap{padding:0 32px}
+  section{padding-top:120px}
+  .hero-card{margin:-110px 0 0 32px;padding:44px 48px 40px;grid-column:1/8}
+  .hero-ph{grid-column:2/-1;grid-row:1/3}
+  .hero-ph img{height:78svh}
+  .hero-card{grid-row:2}
+  .hero .sub span{display:inline}
+  .hero .sub span+span::before{content:" / ";color:var(--sage)}
+  .intro{grid-template-columns:7fr 5fr;gap:64px;align-items:start}
+  .spread .a{grid-column:1/8}
+  .spread .b{grid-column:5/8;grid-row:1;margin-top:clamp(180px,22vw,260px);margin-right:-12px;align-self:start;z-index:2}
+  .spread .info{grid-column:8/13;grid-row:1;margin-top:0}
+  .spread .a{grid-row:1}
+  .spread .a+.b+.info{padding-left:8px}
+  .stay-hero{margin:0}
+  .stay-hero figcaption{padding:0}
+  .boxes{grid-template-columns:1fr 1fr;column-gap:56px}
+  .boxes .wide{grid-column:1/-1}
+  .stag{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stag figure:nth-child(even){margin-top:44px}
+  .pair .a{grid-column:3/9}
+  .pair .b{grid-column:7/13;margin-top:-6vw}
+  .fg-ph .a{grid-column:1/8}
+  .fg-ph .b{grid-column:6/13;margin-top:-6vw}
+  .panels{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
 }
-@media (min-width:960px){
-  .grid{grid-template-columns:repeat(3,1fr)}
-  .wrap{padding:0 24px}
+@media (min-width:1000px){
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:44px}
+  .spread .a{grid-column:1/8}
+  .spread .info{grid-column:8/13}
 }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/150920_Kappa-bashi_Kamikochi_Japan01n.jpg/1920px-150920_Kappa-bashi_Kamikochi_Japan01n.jpg" alt="上高地 河童橋と穂高連峰">
-  <div class="hero-in">
-    <div class="eyebrow" style="color:#e8c9a6">Kamikochi &amp; Hida-Takayama</div>
-    <h1>上高地・飛騨高山<br>フットゴルフ旅</h1>
-    <div class="date">2026.10.10 Sat – 10.11 Sun</div>
-    <div class="chips">
-      <span class="chip"><i class="fa-solid fa-user-group"></i> 6人</span>
-      <span class="chip"><i class="fa-solid fa-car-side"></i> 車2台</span>
-      <span class="chip"><i class="fa-solid fa-futbol"></i> フットゴルフ</span>
-    </div>
+  <figure class="hero-ph">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/150920_Kappa-bashi_Kamikochi_Japan01n.jpg/1920px-150920_Kappa-bashi_Kamikochi_Japan01n.jpg" alt="上高地 河童橋と穂高連峰">
+    <span class="credit">Photo: Wikimedia Commons</span>
+  </figure>
+  <div class="hero-card">
+    <div class="en">Kamikochi &amp; Hida-Takayama</div>
+    <h1>秋の飛騨、佐んぽ</h1>
+    <p class="sub"><span>上高地・飛騨高山</span><span>2026.10.10 Sat – 10.11 Sun</span><span>6人・車2台</span></p>
   </div>
-  <div class="hero-credit-bottom">写真: Wikimedia Commons</div>
 </header>
 
 <main>
 <!-- overview -->
-<section class="reveal">
-  <div class="wrap">
-    <div class="eyebrow">Overview</div>
-    <h2 class="sec-title">旅のあらまし</h2>
-    <div class="cards">
-      <div class="ov"><i class="fa-solid fa-mountain-sun"></i><div><b>Day1　10/10(土)</b><span>名古屋 → 上高地を散策 → 高山の宿で BBQ・焚き火・サウナ</span></div></div>
-      <div class="ov"><i class="fa-solid fa-futbol"></i><div><b>Day2　10/11(日)</b><span>宿 → 恵那のアドニスゴルフクラブでフットゴルフ → 名古屋へ</span></div></div>
-      <div class="ov"><i class="fa-solid fa-clock"></i><div><b>押さえる時刻</b><span>Day1 08:30 名古屋集合／Day2 13:30 までにゴルフ場へ到着</span></div></div>
+<section>
+  <div class="wrap intro">
+    <div class="reveal">
+      <div class="en">Overview</div>
+      <h2 class="sec-title">旅のあらまし</h2>
+      <p class="lead">歩いて、焚き火をして、サウナに入って、ボールを蹴る。佐いこうの2日間を佐くろう。</p>
+    </div>
+    <div class="glance reveal">
+      <div><b>Day 1</b><span>名古屋 → 上高地を佐ん佐く → 高山の宿で BBQ・焚き火・サウナ</span></div>
+      <div><b>Day 2</b><span>宿 → 恵那のアドニスゴルフクラブでフットゴルフ → 名古屋へ</span></div>
+      <div><b>Time</b><span>8:30 名古屋集合 / 13:30 までにゴルフ場へ到着</span></div>
     </div>
   </div>
 </section>
@@ -185,108 +248,87 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 <!-- Day1 -->
 <section>
   <div class="wrap">
-    <div class="day-head reveal"><span class="day-badge">Day 1</span><h2 class="sec-title" style="margin:0">10/10(土)　上高地と山の宿</h2></div>
-    <ol class="timeline">
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">08:30</div>
-        <h3>名古屋 集合 → 車2台で出発</h3>
-        <p>名古屋から東海北陸道 → 飛騨清見IC → 中部縦貫道 高山IC → 国道158号で平湯の「あかんだな駐車場」へ（約3時間の目安）。</p>
-        <div class="note"><i class="fa-solid fa-lightbulb"></i> 2台が別々になりにくいよう、途中の合流ポイントとして<b>ひるがの高原SA</b>での休憩を提案します。</div>
-        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85&destination=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> 名古屋駅 → あかんだな駐車場</a>
-      </div></li>
+    <div class="day-h reveal"><span class="num">01</span><div><div class="en">Day 1</div><h2>10/10(土)　上高地と山の宿</h2></div></div>
 
-      <li class="tl key reveal"><div class="tl-card">
-        <div class="time">〜12:00</div>
-        <h3>あかんだな駐車場に到着 → シャトルバスで上高地へ</h3>
-        <div class="alert"><i class="fa-solid fa-ban"></i> 上高地は<b>マイカー規制</b>があり、車では入れません。駐車場に車を置いて濃飛バスのシャトルで向かいます。</div>
+    <div class="meet reveal">
+      <span class="time">8:30</span>
+      <h3>名古屋 集合（車2台）</h3>
+    </div>
+
+    <article class="spread">
+      <figure class="a reveal"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg/1920px-View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg" alt="河童橋からの眺め"><figcaption>Kappa-bashi / Wikimedia Commons</figcaption></figure>
+      <figure class="b reveal"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/150920_Taisho-ike_Kamikochi_Japan01n.jpg/1920px-150920_Taisho-ike_Kamikochi_Japan01n.jpg" alt="大正池"></figure>
+      <div class="info reveal">
+        <div class="en">Spot</div>
+        <h3>上高地</h3>
+        <div class="alert">上高地は<b>マイカー規制</b>があり、車では入れません。平湯の「あかんだな駐車場」に停めて、濃飛バスのシャトルバスで向かいます。</div>
         <ul>
           <li>所要 約30分、片道 1,400円/人（2025年9月時点の情報）</li>
           <li>予約不可。10月は紅葉シーズンで混雑します</li>
-          <li>最終便の時刻：<span class="tbc">当日要確認</span></li>
+          <li>佐いしゅう便の時刻：<span class="tbc">当日要確認</span></li>
+          <li>見どころ：河童橋（穂高連峰の眺め）・大正池・梓川沿いの佐んぽ</li>
         </ul>
-      </div></li>
-
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">12:30〜15:30</div>
-        <h3>上高地を散策</h3>
-        <p>河童橋（穂高連峰の眺め）・昼食・大正池・梓川沿いの散歩。</p>
-        <div class="note"><i class="fa-solid fa-temperature-low"></i> 10月の上高地は朝晩5℃前後まで冷え込みます。防寒を忘れずに。</div>
-        <div class="photo-row two">
-          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg/1920px-View_from_Kappabashi_Bridge_in_Kamikochi_2.jpg" alt="河童橋からの眺め"><figcaption>河童橋 / Wikimedia Commons</figcaption></figure>
-          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/150920_Taisho-ike_Kamikochi_Japan01n.jpg/1920px-150920_Taisho-ike_Kamikochi_Japan01n.jpg" alt="大正池"><figcaption>大正池 / Wikimedia Commons</figcaption></figure>
-        </div>
-      </div></li>
-
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">15:30〜16:00</div>
-        <h3>帰りのバス → あかんだな駐車場</h3>
-        <p>最終便の時刻は<span class="tbc">当日要確認</span>。余裕を持って乗り場へ。</p>
-      </div></li>
-
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">移動の途中</div>
-        <h3>高山市内で BBQ の食材を買い出し</h3>
-        <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%B1%B1%E5%B8%82+%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> 高山市のスーパーを探す</a>
-      </div></li>
-
-      <li class="tl key reveal"><div class="tl-card">
-        <div class="time">夕方</div>
-        <h3>宿にチェックイン → BBQ・焚き火・サウナ</h3>
-        <div class="alert"><i class="fa-solid fa-triangle-exclamation"></i> チェックインの受付は宿ではなく<b>「飛騨高山ゴルフ練習場ワット」</b>です。詳しくは下の宿セクションへ。</div>
-        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&destination=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> あかんだな → 宿</a>
-      </div></li>
-    </ol>
+        <div class="note">10月の上高地は朝晩5℃前後まで冷え込みます。防寒を忘れずに。</div>
+        <div class="btns"><a class="btn fill" href="https://www.google.com/maps/dir/?api=1&origin=%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A7%85&destination=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&travelmode=driving" target="_blank" rel="noopener">名古屋駅 → あかんだな駐車場</a></div>
+      </div>
+    </article>
   </div>
 </section>
 
 <!-- Lodging -->
-<section class="lodge">
+<section class="stay" id="stay">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">Stay</div>
-      <h2 class="sec-title">宿：WAT RESORT<br><span style="font-size:1.05rem;font-weight:500">焚き火とサウナ BBQ&amp;リゾート ヴィラ高山</span></h2>
-      <figure><img src="https://static.wixstatic.com/media/37456b_8e6880177e514f3fb743319ca0f54a24~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="WAT RESORT 外観" loading="lazy"><figcaption>WAT RESORT</figcaption></figure>
+      <div class="en">Day 1 · Stay</div>
+      <h2 class="sec-title">宿：WAT RESORT</h2>
+      <p class="sec-sub">焚き火とサウナ BBQ&amp;リゾート ヴィラ高山</p>
+      <figure class="stay-hero"><img src="https://static.wixstatic.com/media/37456b_8e6880177e514f3fb743319ca0f54a24~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="WAT RESORT 外観" loading="lazy"><figcaption>WAT RESORT</figcaption></figure>
     </div>
 
-    <div class="alert reveal" style="margin-top:20px"><i class="fa-solid fa-triangle-exclamation"></i> <b>チェックインの受付場所は「飛騨高山ゴルフ練習場ワット」</b>です。宿とは別の場所なので注意してください。</div>
-    <a class="btn alt reveal" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E3%82%B4%E3%83%AB%E3%83%95%E7%B7%B4%E7%BF%92%E5%A0%B4%E3%83%AF%E3%83%83%E3%83%88" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> 受付場所（ワット）</a>
-    <a class="btn reveal" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i> 宿の場所</a>
-    <a class="btn reveal" href="https://wr-resort.watgroup.co.jp/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> 公式サイト</a>
-
-    <div class="lodge-box reveal">
-      <h3><i class="fa-solid fa-circle-info"></i> 基本情報</h3>
-      <dl class="dl">
-        <dt>住所</dt><dd>〒506-0817 岐阜県高山市山口町861-6</dd>
-        <dt>チェックイン</dt><dd>15:00（最終 21:00）</dd>
-        <dt>チェックアウト</dt><dd>10:00</dd>
-        <dt>アクセス</dt><dd>JR高山駅から車で約15分</dd>
-        <dt>駐車場</dt><dd>各棟1台無料、2台目も無料スペースあり（今回は2台とも OK）</dd>
-      </dl>
+    <div class="alert reveal"><b>チェックインの受付場所は「飛騨高山ゴルフ練習場ワット」</b>です。宿とは別の場所なので注意してくだ佐い。</div>
+    <div class="btns reveal">
+      <a class="btn fill" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9B%E9%A8%A8%E9%AB%98%E5%B1%B1%E3%82%B4%E3%83%AB%E3%83%95%E7%B7%B4%E7%BF%92%E5%A0%B4%E3%83%AF%E3%83%83%E3%83%88" target="_blank" rel="noopener">受付場所（ワット）</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6" target="_blank" rel="noopener">宿の場所</a>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E3%81%82%E3%81%8B%E3%82%93%E3%81%A0%E3%81%AA%E9%A7%90%E8%BB%8A%E5%A0%B4&destination=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&travelmode=driving" target="_blank" rel="noopener">あかんだな → 宿</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%B1%B1%E5%B8%82+%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC" target="_blank" rel="noopener">BBQの買い出し：高山市のスーパーを佐がす</a>
+      <a class="btn" href="https://wr-resort.watgroup.co.jp/" target="_blank" rel="noopener">公式サイト</a>
     </div>
 
-    <div class="photo-row reveal">
-      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_f42764a86c424237be43ff059ab6c0b3~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="ヴィラ"><figcaption>ヴィラ / WAT RESORT</figcaption></figure>
-      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_d2798bdf959e4bf5a15b6713ef586e39~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="プライベートガーデン"><figcaption>ガーデン / WAT RESORT</figcaption></figure>
-      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_faa27199f7c743a382cd499ddf61a082~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="BBQ"><figcaption>BBQ / WAT RESORT</figcaption></figure>
-      <figure><img loading="lazy" src="https://static.wixstatic.com/media/37456b_cf8224538912413c879cb0aa3655bc6b~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="サウナ"><figcaption>サウナ / WAT RESORT</figcaption></figure>
+    <div class="boxes">
+      <div class="reveal">
+        <h3 class="box-t">基本情報</h3>
+        <dl class="dl">
+          <dt>住所</dt><dd>〒506-0817 岐阜県高山市山口町861-6</dd>
+          <dt>チェックイン</dt><dd>15:00（佐いしゅう 21:00）</dd>
+          <dt>チェックアウト</dt><dd>10:00</dd>
+          <dt>アクセス</dt><dd>JR高山駅から車で約15分</dd>
+          <dt>駐車場</dt><dd>各棟1台無料、2台目も無料スペースあり（今回は2台とも OK）</dd>
+        </dl>
+      </div>
+      <div class="reveal">
+        <h3 class="box-t">設備</h3>
+        <ul>
+          <li>1棟の定員8名、室内約70㎡</li>
+          <li>プライベートサウナ／プライベートガーデンで焚き火</li>
+          <li>BBQ コンロと焚き火セットは無料貸出</li>
+          <li>浴室・トイレは各棟専用／ダブルベッド3台／ミニキッチン／Wi-Fi／エアコン</li>
+        </ul>
+      </div>
+      <div class="reveal wide">
+        <h3 class="box-t">ハウスルール</h3>
+        <ul>
+          <li>手持ち花火程度なら OK。大きな音の出る花火は禁止</li>
+          <li>人工芝を焦が佐ない</li>
+          <li>火事・けがに注意し、使用後の後始末をしっかり行う</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="lodge-box reveal">
-      <h3><i class="fa-solid fa-fire"></i> 設備</h3>
-      <ul>
-        <li>1棟の定員8名、室内約70㎡</li>
-        <li>プライベートサウナ／プライベートガーデンで焚き火</li>
-        <li>BBQ コンロと焚き火セットは無料貸出</li>
-        <li>浴室・トイレは各棟専用／ダブルベッド3台／ミニキッチン／Wi-Fi／エアコン</li>
-      </ul>
-    </div>
-    <div class="lodge-box reveal">
-      <h3><i class="fa-solid fa-book"></i> ハウスルール</h3>
-      <ul>
-        <li>手持ち花火程度なら OK。大きな音の出る花火は禁止</li>
-        <li>人工芝を焦がさない</li>
-        <li>火事・けがに注意し、使用後の後始末をしっかり行う</li>
-      </ul>
+    <div class="stag">
+      <figure class="reveal"><img loading="lazy" src="https://static.wixstatic.com/media/37456b_f42764a86c424237be43ff059ab6c0b3~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="ヴィラ"><figcaption>Villa</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="https://static.wixstatic.com/media/37456b_d2798bdf959e4bf5a15b6713ef586e39~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="プライベートガーデン"><figcaption>Garden</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="https://static.wixstatic.com/media/37456b_faa27199f7c743a382cd499ddf61a082~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="BBQ"><figcaption>BBQ</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="https://static.wixstatic.com/media/37456b_cf8224538912413c879cb0aa3655bc6b~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/a.jpg" alt="サウナ"><figcaption>Sauna</figcaption></figure>
     </div>
   </div>
 </section>
@@ -294,43 +336,33 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 <!-- Day2 -->
 <section>
   <div class="wrap">
-    <div class="day-head reveal"><span class="day-badge">Day 2</span><h2 class="sec-title" style="margin:0">10/11(日)　キックオフ</h2></div>
-    <ol class="timeline">
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">朝 〜 10:00</div>
-        <h3>片付け → チェックアウト・出発</h3>
-        <p>火の始末と後片付けをして、10:00 にチェックアウト。</p>
-      </div></li>
+    <div class="day-h reveal"><span class="num">02</span><div><div class="en">Day 2</div><h2>10/11(日)　キックオフ</h2></div></div>
 
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">10:00 出発</div>
-        <h3>宿 → アドニスゴルフクラブ</h3>
-        <p>約2時間半の目安。高山から東海北陸道 → 東海環状道 → 中央道 恵那IC 方面。昼食は途中の SA などで。</p>
-        <div class="alert"><i class="fa-solid fa-stopwatch"></i> <b>13:30 までに到着必須</b></div>
-        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&destination=%E3%82%A2%E3%83%89%E3%83%8B%E3%82%B9%E3%82%B4%E3%83%AB%E3%83%95%E3%82%AF%E3%83%A9%E3%83%96+%E5%B2%90%E9%98%9C%E7%9C%8C%E6%81%B5%E9%82%A3%E5%B8%82%E4%B8%8A%E7%9F%A2%E4%BD%9C%E7%94%BA%E6%BC%86%E5%8E%9F572-210&travelmode=driving" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i> 宿 → アドニスゴルフクラブ</a>
-      </div></li>
-
-      <li class="tl key reveal"><div class="tl-card">
-        <div class="time">13:30</div>
-        <h3>到着・受付</h3>
-      </div></li>
-
-      <li class="tl key reveal"><div class="tl-card">
-        <div class="time">13:50</div>
-        <h3>スタートホールに集合</h3>
-        <div class="alert"><i class="fa-solid fa-stopwatch"></i> スタートの10分前には到着が必須です。</div>
-      </div></li>
-
-      <li class="tl reveal"><div class="tl-card">
-        <div class="time">14:00 〜 16:30ごろ</div>
-        <h3>キックオフ</h3>
-        <p>プレーの目安は2時間30分。終了後は名古屋へ（下の寄り道提案もどうぞ）。</p>
-        <div class="photo-row two">
-          <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/m_photo.jpg" alt="フットゴルフ"><figcaption>アドニスゴルフクラブ</figcaption></figure>
-          <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/photo01.jpg" alt="フットゴルフのプレー"><figcaption>アドニスゴルフクラブ</figcaption></figure>
+    <div class="moments">
+      <div class="mo reveal">
+        <span class="time">10:00</span>
+        <div><h3>チェックアウト</h3><p>火の始末と後片付けをして出発。</p>
+          <div class="btns"><a class="btn fill" href="https://www.google.com/maps/dir/?api=1&origin=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%AB%98%E5%B1%B1%E5%B8%82%E5%B1%B1%E5%8F%A3%E7%94%BA861-6&destination=%E3%82%A2%E3%83%89%E3%83%8B%E3%82%B9%E3%82%B4%E3%83%AB%E3%83%95%E3%82%AF%E3%83%A9%E3%83%96+%E5%B2%90%E9%98%9C%E7%9C%8C%E6%81%B5%E9%82%A3%E5%B8%82%E4%B8%8A%E7%9F%A2%E4%BD%9C%E7%94%BA%E6%BC%86%E5%8E%9F572-210&travelmode=driving" target="_blank" rel="noopener">宿 → アドニスゴルフクラブ</a></div>
         </div>
-      </div></li>
-    </ol>
+      </div>
+      <div class="mo reveal">
+        <span class="time">13:30</span>
+        <div><h3>到着・受付</h3><div class="alert" style="margin-bottom:0"><b>13:30 までに到着が必須</b>です。</div></div>
+      </div>
+      <div class="mo reveal">
+        <span class="time sm">10 min<br>before</span>
+        <div><h3>スタートホールへ</h3><p>スタートの10分前には到着が必須です。</p></div>
+      </div>
+      <div class="mo reveal">
+        <span class="time">14:00</span>
+        <div><h3>キックオフ</h3><p>プレーの目安は約2時間30分。終了後は名古屋へ（下の寄り道提案もどうぞ）。</p></div>
+      </div>
+    </div>
+
+    <div class="pair">
+      <figure class="a reveal"><img loading="lazy" src="https://adonis-gc.com/images/footgolf/m_photo.jpg" alt="フットゴルフ"><figcaption>Adonis Golf Club</figcaption></figure>
+      <figure class="b reveal"><img loading="lazy" src="https://adonis-gc.com/images/footgolf/photo01.jpg" alt="フットゴルフのプレー"></figure>
+    </div>
   </div>
 </section>
 
@@ -338,42 +370,42 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 <section>
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">Footgolf</div>
+      <div class="en">Footgolf</div>
       <h2 class="sec-title">フットゴルフのルール・服装</h2>
-      <div class="photo-row two">
-        <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro01.jpg" alt="コース"><figcaption>アドニスゴルフクラブ</figcaption></figure>
-        <figure><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro02.jpg" alt="コース"><figcaption>アドニスゴルフクラブ</figcaption></figure>
-      </div>
+    </div>
+    <div class="fg-ph">
+      <figure class="a reveal"><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro01.jpg" alt="コース"><figcaption>Course</figcaption></figure>
+      <figure class="b reveal"><img loading="lazy" src="https://adonis-gc.com/images/footgolf/barbaro02.jpg" alt="コース"></figure>
     </div>
 
-    <div class="two-col">
+    <div class="panels">
       <div class="panel reveal">
-        <h3><i class="fa-solid fa-flag"></i> 会場・料金</h3>
-        <p style="font-size:.93rem;margin:0 0 8px">アドニスゴルフクラブ<br>〒509-7511 岐阜県恵那市上矢作町漆原572-210<br>TEL <a href="tel:0573483181">0573-48-3181</a>（電話予約のみ）</p>
+        <h3>会場・料金</h3>
+        <p class="addr">アドニスゴルフクラブ<br>〒509-7511 岐阜県恵那市上矢作町漆原572-210<br>TEL <a href="tel:0573483181">0573-48-3181</a>（電話予約のみ）</p>
         <table class="price">
           <tr><td>1ラウンド（土日祝・一般）</td><td>6,000円</td></tr>
           <tr><td>レンタルボール</td><td>500円/球</td></tr>
           <tr><td>ボール紛失</td><td>1,000円/球</td></tr>
           <tr><td>レンタルカート</td><td>2,000円/台</td></tr>
         </table>
-        <p class="small">1組2〜4名。6人なので3人×2組の想定です。</p>
-        <a class="btn alt" href="https://adonis-gc.com/footgolf.html" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> 公式ページ</a>
+        <p class="small" style="margin-top:12px">1組2〜4名。6人なので3人×2組の想定です。</p>
+        <div class="btns"><a class="btn" href="https://adonis-gc.com/footgolf.html" target="_blank" rel="noopener">公式ページ</a></div>
       </div>
 
       <div class="panel reveal">
-        <h3><i class="fa-solid fa-shirt"></i> 服装・持ち物</h3>
+        <h3>服装・持ち物</h3>
         <ul>
           <li>スポーツシューズ（<span class="ng">サッカースパイクは不可</span>）</li>
           <li>ゴルフに準じた服装、またはサッカー用のウェアで OK</li>
           <li>ポロシャツ＋スポーツ用インナー、ハーフパンツ＋スポーツタイツの組み合わせも可</li>
-          <li>寒いときは防寒着 OK</li>
+          <li>佐むいときは防寒着 OK</li>
           <li><span class="ng">来場時のジーパン・サンダルは禁止</span></li>
-          <li>サッカーボールはできるだけ持参</li>
+          <li>サッカーボールはできるだけ持佐ん</li>
         </ul>
       </div>
 
       <div class="panel reveal">
-        <h3><i class="fa-solid fa-handshake"></i> ルール・マナー</h3>
+        <h3>ルール・マナー</h3>
         <ul>
           <li>グリーン上でのプレーは原則禁止</li>
           <li>大声や他のプレーヤーへの迷惑行為は禁止</li>
@@ -385,7 +417,7 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
       </div>
 
       <div class="panel reveal">
-        <h3><i class="fa-solid fa-cloud-rain"></i> キャンセル・中止</h3>
+        <h3>キャンセル・中止</h3>
         <ul>
           <li>当日のキャンセルや来場しなかった場合は、プレーフィと同額のキャンセル料</li>
           <li>悪天候などで予告なく中止になることがあります</li>
@@ -399,17 +431,17 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 <section>
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">On the way home</div>
+      <div class="en">On the way home</div>
       <h2 class="sec-title">帰り道の寄り道提案</h2>
-      <p style="margin:-8px 0 18px;font-size:.95rem">こんなこともできます。気分と時間で選んでください。</p>
+      <p style="margin:-10px 0 28px;font-size:.95rem">こんなこともできます。気分と時間で選んでくだ佐い。</p>
     </div>
     <div class="grid">
-      <div class="idea reveal"><span class="no">01</span><h3>くしはら温泉 ささゆりの湯</h3><p>恵那市串原。ゴルフ場から近く、汗を流してから帰れます。<br>営業 10:00〜21:00（受付は20:00まで）／水曜定休</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%97%E3%81%AF%E3%82%89%E6%B8%A9%E6%B3%89+%E3%81%95%E3%81%95%E3%82%86%E3%82%8A%E3%81%AE%E6%B9%AF" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
-      <div class="idea reveal"><span class="no">02</span><h3>恵那川上屋 恵那峡店</h3><p>栗きんとん・栗スイーツ。10月は栗の旬です。<br>営業 9:00〜18:30／恵那市大井町2632-105<br>栗きんとんは9月〜翌1月中旬の販売</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E6%81%B5%E9%82%A3%E5%B7%9D%E4%B8%8A%E5%B1%8B+%E6%81%B5%E9%82%A3%E5%B3%A1%E5%BA%97" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
-      <div class="idea reveal"><span class="no">03</span><h3>道の駅 上矢作 ラ・フォーレ福寿の里</h3><p>ゴルフ場のすぐ近くでおみやげ探し。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85+%E4%B8%8A%E7%9F%A2%E4%BD%9C+%E3%83%A9%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC%E7%A6%8F%E5%AF%BF%E3%81%AE%E9%87%8C" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
-      <div class="idea reveal"><span class="no">04</span><h3>足助の町並み・香嵐渓</h3><p>豊田市。国道153号で名古屋へ帰る途中。紅葉の本番は11月です。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E8%B6%B3%E5%8A%A9%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF+%E9%A6%99%E5%B5%90%E6%B8%93" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
-      <div class="idea reveal"><span class="no">05</span><h3>土岐プレミアム・アウトレット</h3><p>中央道を通る帰り道で買い物。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%9F%E5%B2%90%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%BB%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
-      <div class="idea reveal"><span class="no">06</span><h3>名古屋で打ち上げ</h3><p>名古屋に戻ってからごはん。手羽先・味噌煮込み・ひつまぶし。</p><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E5%8F%A4%E5%B1%8B+%E6%89%8B%E7%BE%BD%E5%85%88+%E5%91%B3%E5%99%8C%E7%85%AE%E8%BE%BC%E3%81%BF+%E3%81%B2%E3%81%A4%E3%81%BE%E3%81%B6%E3%81%97" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">01</span><h3>くしはら温泉 ささゆりの湯<span class="pun">佐佐ゆりの湯</span></h3><p>恵那市串原。ゴルフ場から近く、汗を流してから帰れます。<br>営業 10:00〜21:00（受付は20:00まで）／水曜定休</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%97%E3%81%AF%E3%82%89%E6%B8%A9%E6%B3%89+%E3%81%95%E3%81%95%E3%82%86%E3%82%8A%E3%81%AE%E6%B9%AF" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">02</span><h3>恵那川上屋 恵那峡店</h3><p>栗きんとん・栗スイーツ。10月は栗の旬です。<br>営業 9:00〜18:30／恵那市大井町2632-105<br>栗きんとんは9月〜翌1月中旬の販売</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%81%B5%E9%82%A3%E5%B7%9D%E4%B8%8A%E5%B1%8B+%E6%81%B5%E9%82%A3%E5%B3%A1%E5%BA%97" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">03</span><h3>道の駅 上矢作 ラ・フォーレ福寿の里</h3><p>ゴルフ場のすぐ近くでおみやげ佐がし。</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85+%E4%B8%8A%E7%9F%A2%E4%BD%9C+%E3%83%A9%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC%E7%A6%8F%E5%AF%BF%E3%81%AE%E9%87%8C" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">04</span><h3>足助の町並み・香嵐渓</h3><p>豊田市。国道153号で名古屋へ帰る途中。紅葉の本番は11月です。</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E8%B6%B3%E5%8A%A9%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF+%E9%A6%99%E5%B5%90%E6%B8%93" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">05</span><h3>土岐プレミアム・アウトレット</h3><p>中央道を通る帰り道で買い物。</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%9F%E5%B2%90%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%BB%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
+      <div class="idea reveal"><span class="no">06</span><h3>名古屋で打ち上げ</h3><p>名古屋に戻ってからごはん。手羽佐き・味噌煮込み・ひつまぶし。</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E5%8F%A4%E5%B1%8B+%E6%89%8B%E7%BE%BD%E5%85%88+%E5%91%B3%E5%99%8C%E7%85%AE%E8%BE%BC%E3%81%BF+%E3%81%B2%E3%81%A4%E3%81%BE%E3%81%B6%E3%81%97" target="_blank" rel="noopener">Google マップ</a><div class="small">営業時間は当日要確認</div></div>
     </div>
   </div>
 </section>
@@ -418,20 +450,20 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 <section>
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">Packing</div>
+      <div class="en">Packing</div>
       <h2 class="sec-title">持ち物チェックリスト</h2>
       <p class="progress" id="progress" aria-live="polite"></p>
       <ul class="check" id="check">
-        <li><label><input type="checkbox" data-k="0"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">防寒着（上高地は朝晩5℃前後）</span></label></li>
-        <li><label><input type="checkbox" data-k="1"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">歩きやすい靴</span></label></li>
-        <li><label><input type="checkbox" data-k="2"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">スポーツシューズ（スパイク以外）</span></label></li>
-        <li><label><input type="checkbox" data-k="3"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">フットゴルフ用のウェア</span></label></li>
-        <li><label><input type="checkbox" data-k="4"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">サッカーボール</span></label></li>
-        <li><label><input type="checkbox" data-k="5"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">着替え・タオル</span></label></li>
-        <li><label><input type="checkbox" data-k="6"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">サウナ用の着替え</span></label></li>
-        <li><label><input type="checkbox" data-k="7"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">現金（バス代など）</span></label></li>
-        <li><label><input type="checkbox" data-k="8"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">モバイルバッテリー</span></label></li>
-        <li><label><input type="checkbox" data-k="9"><span class="box"><i class="fa-solid fa-check"></i></span><span class="txt">BBQ の食材・飲み物（買い出し）</span></label></li>
+        <li><label><input type="checkbox" data-k="0"><span class="box"></span><span class="txt">防寒着（上高地は朝晩5℃前後）</span></label></li>
+        <li><label><input type="checkbox" data-k="1"><span class="box"></span><span class="txt">歩きやすい靴</span></label></li>
+        <li><label><input type="checkbox" data-k="2"><span class="box"></span><span class="txt">スポーツシューズ（スパイク以外）</span></label></li>
+        <li><label><input type="checkbox" data-k="3"><span class="box"></span><span class="txt">フットゴルフ用のウェア</span></label></li>
+        <li><label><input type="checkbox" data-k="4"><span class="box"></span><span class="txt">サッカーボール</span></label></li>
+        <li><label><input type="checkbox" data-k="5"><span class="box"></span><span class="txt">着替え・タオル</span></label></li>
+        <li><label><input type="checkbox" data-k="6"><span class="box"></span><span class="txt">サウナ用の着替え</span></label></li>
+        <li><label><input type="checkbox" data-k="7"><span class="box"></span><span class="txt">現金（バス代など）</span></label></li>
+        <li><label><input type="checkbox" data-k="8"><span class="box"></span><span class="txt">モバイルバッテリー</span></label></li>
+        <li><label><input type="checkbox" data-k="9"><span class="box"></span><span class="txt">BBQ の食材・飲み物（買い出し）</span></label></li>
       </ul>
     </div>
   </div>
@@ -439,10 +471,10 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
 </main>
 
 <footer>
-  <div class="ft">上高地・飛騨高山 フットゴルフ旅</div>
+  <div class="ft">秋の飛騨、佐んぽ</div>
   <div>2026.10.10 Sat – 10.11 Sun ／ 6人・車2台</div>
-  <div class="small" style="color:#9fb0a6;margin-top:10px">写真: Wikimedia Commons / WAT RESORT / アドニスゴルフクラブ</div>
-  <div class="small" style="color:#9fb0a6">料金・時刻は変更の可能性があります。不確かな項目は当日確認してください。</div>
+  <div class="small">Photo: Wikimedia Commons / WAT RESORT / アドニスゴルフクラブ</div>
+  <div class="small">料金・時刻は変更の可能性があります。不確かな項目は当日確認してくだ佐い。</div>
 </footer>
 
 <script>
@@ -453,7 +485,7 @@ footer .ft{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:6
   }else{
     var io=new IntersectionObserver(function(es){
       es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}});
-    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    },{threshold:.06,rootMargin:'0px 0px -4% 0px'});
     els.forEach(function(e){io.observe(e)});
   }
 
